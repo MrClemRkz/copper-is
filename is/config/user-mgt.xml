@@ -171,10 +171,10 @@
         <UserStoreManager class="org.wso2.carbon.user.core.ldap.ReadWriteLDAPUserStoreManager">
             <Property name="TenantManager">org.wso2.carbon.user.core.tenant.CommonHybridLDAPTenantManager</Property>
             <Property name="ConnectionURL">ldap://openldap:389</Property>
-            <Property name="ConnectionName">cn=admin,dc=wso2,dc=com</Property>
+            <Property name="ConnectionName">cn=admin,dc=copper,dc=opensource,dc=lk</Property>
             <Property name="ConnectionPassword">admin</Property>
             <Property name="AnonymousBind">false</Property>
-            <Property name="UserSearchBase">ou=Users,dc=wso2,dc=com</Property>
+            <Property name="UserSearchBase">ou=Users,dc=copper,dc=opensource,dc=lk</Property>
             <Property name="UserEntryObjectClass">identityPerson</Property>
             <Property name="UserNameAttribute">uid</Property>
             <Property name="UserNameSearchFilter">(&amp;(objectClass=person)(uid=?))</Property>
@@ -182,7 +182,7 @@
             <Property name="DisplayNameAttribute"/>
             <Property name="ReadGroups">true</Property>
             <Property name="WriteGroups">true</Property>
-            <Property name="GroupSearchBase">ou=Groups,dc=wso2,dc=com</Property>
+            <Property name="GroupSearchBase">ou=Groups,dc=copper,dc=opensource,dc=lk</Property>
             <Property name="GroupEntryObjectClass">groupOfNames</Property>
             <Property name="GroupNameAttribute">cn</Property>
             <Property name="GroupNameSearchFilter">(&amp;(objectClass=groupOfNames)(cn=?))</Property>

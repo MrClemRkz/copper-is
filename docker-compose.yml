@@ -1,16 +1,15 @@
 version: '3'
 
 services:
-  # is:
-  #   build: 
-  #     context: ./is
-  #   image: copper-is
-  #   container_name: copper-is
-  #   ports:
-  #     - "9443:9443"
-  #   entrypoint: /home/wso2carbon/init.sh
-  #   depends_on:
-  #     - openldap
+  is:
+    build: 
+      context: ./is
+    image: copper-is
+    container_name: copper-is
+    ports:
+      - "9443:9443"
+    depends_on:
+      - openldap
 
   openldap:
     build:
@@ -24,8 +23,10 @@ services:
     ports:
       - "389:389"
       - "636:636"
+    domainname: "copper.opensource.lk" # important: same as hostname
+    hostname: "copper.opensource.lk"
 
-      # cn=admin,dc=copper,dc=opensource,dc=lk
+    # cn=admin,dc=copper,dc=opensource,dc=lk
 
   phpldapadmin:
     image: osixia/phpldapadmin:latest
