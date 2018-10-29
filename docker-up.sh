@@ -18,4 +18,6 @@ docker exec -it copper-openldap /usr/bin/ldapadd -Y EXTERNAL -H ldapi:// -f /hom
 docker exec -it copper-openldap /usr/bin/ldapadd -Y EXTERNAL -H ldapi:// -f /home/98-scimPerson.ldif
 docker exec -it copper-openldap /usr/bin/ldapadd -Y EXTERNAL -H ldapi:// -f /home/99-identityPerson.ldif
 
+# docker exec -it copper-openldap /usr/bin/ldapmodify -Y EXTERNAL -H ldapi:// -f /changes.ldif
+
 docker exec -it copper-openldap /usr/bin/ldapadd -x -D 'cn=admin,dc=copper,dc=opensource,dc=lk' -w admin -H ldapi:// -f /home/copper-users.ldif
