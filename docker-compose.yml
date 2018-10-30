@@ -8,6 +8,8 @@ services:
     container_name: copper-is
     ports:
       - "9443:9443"
+    environment:
+      - HOSTNAME=localhost.com
     depends_on:
       - openldap
 

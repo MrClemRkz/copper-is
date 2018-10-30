@@ -37,3 +37,4 @@ ARG WSO2_SERVER_CONF=${WSO2_SERVER_HOME}/repository/conf
 # change cofiguration
 COPY --chown=wso2carbon:wso2 ${CONFIG}/tenant-mgt.xml ${WSO2_SERVER_CONF}/
 COPY --chown=wso2carbon:wso2 ${CONFIG}/user-mgt.xml ${WSO2_SERVER_CONF}/
+COPY --chown=wso2carbon:wso2 ${CONFIG}/carbon.xml ${WSO2_SERVER_CONF}/
